@@ -56,7 +56,7 @@ def tokenizing(text,language):
 def generateTokenizedBR(i):
     try:
         textCV = str(df_portuguese['cv_text'][i]);
-        textTokenized = tokenizing(textCV);
+        textTokenized = tokenizing(textCV,'br');
         os.chdir(pathFolderBR);
         createFolder = os.path.join(os.getcwd(),"{}".format(i));
         os.mkdir(createFolder);
@@ -76,7 +76,7 @@ def generateTokenizedBR(i):
 def generateTokenizedEN(i):
     try:
         textCV = str(df_english['cv_text'][i]);
-        textTokenized = tokenizing(textCV);
+        textTokenized = tokenizing(textCV,'en');
         os.chdir(pathFolderEN);
         createFolder = os.path.join(os.getcwd(),"{}".format(i));
         os.mkdir(createFolder);
